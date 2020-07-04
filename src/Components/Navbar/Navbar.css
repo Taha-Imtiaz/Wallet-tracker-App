@@ -1,0 +1,14 @@
+.navbar{
+    width: 100vw;
+    height: 80px;
+    background-color: lightslategray;
+    display: grid;
+    grid-template-columns: 20fr 60fr 20fr;
+}
+.logo , .mid , .signout{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
