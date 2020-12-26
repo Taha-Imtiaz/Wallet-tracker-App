@@ -1,0 +1,22 @@
+.dateFilter {
+    /* background-color: lightslategrey; */
+    display: grid;
+    grid-template-rows: 10vh;
+    grid-template-areas: "dateFilterStyling";
+}
+.dateFilterStyling {
+    grid-area: dateFilterStyling;
+    display: grid;
+    grid-template-columns: 1fr 2fr repeat(2, 1fr);
+    grid-template-areas: ". datePickers button .";
+    
+}
+.datePickers {
+    grid-area: datePickers;
+    grid-gap: 1.5rem;
+}
+.button{
+    grid-area: button;
+    grid-gap: 1.5rem;
+    align-self: center;
+}

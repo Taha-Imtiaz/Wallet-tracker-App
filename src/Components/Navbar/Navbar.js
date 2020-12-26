@@ -2,6 +2,7 @@ import React from 'react'
 import { signout } from '../../Redux/user/userActions'
 import { connect } from 'react-redux'
 import "./Navbar.css"
+import { Button } from '@material-ui/core'
 
 const Navbar = (props) => {
     var {signout, user, currentAmount} = props
@@ -11,15 +12,22 @@ const Navbar = (props) => {
         why would he see other pages of my app*/
         <div className = "navbar">
             <div className = "logo">
-                <h3>LOGO</h3>
+                <h2>LOGO</h2>
             </div>
 
             <div className = "mid">
-             { user &&  <h3>{`${currentAmount} PKR`}</h3> }
+             { user &&  <h2>{`Net Amount in Wallet is ${currentAmount} PKR`}</h2> }
             </div>
 
            <div className = "signout">
-         {user &&  <button onClick = {() => signout()}>Signout</button>}
+         {user &&  <Button  style={{
+              background: "#00ADEE",
+              textTransform: "none",
+              color: "#FFF",
+              fontFamily: "sans-serif",
+            
+            }}
+          onClick = {() => signout()}>Signout</Button>}
            </div>
 
         </div>

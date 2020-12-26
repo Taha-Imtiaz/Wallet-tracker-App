@@ -4,7 +4,7 @@ import SigninForm from '../../Components/SigninForm/SigninForm'
 import GoogleSignin from '../../Components/GoogleSignin/GoogleSignin'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
-
+import style from "./Home.module.css"
 
 const Home = (props) => {
     //if user exists then navigate to transaction page otherwise if user doesn't exist then it is in the initial state
@@ -19,10 +19,11 @@ const Home = (props) => {
         { user ?  ( <Redirect to = {`/dashboard/${user.uid}/transactions`}></Redirect>)
            :
            (<div>
-            <h1>Home Page</h1>
-            <SignupForm/>
+            {/* <h1>Home Page</h1> */}
+            {/* <SignupForm/> */}
             <SigninForm/>
-            <GoogleSignin/>
+            {/* <GoogleSignin/> */}
+            
             </div>
             )}
             {/* Simple Routing */}

@@ -1,0 +1,61 @@
+.signupContainer {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: calc(100vh - 80px);
+    grid-template-areas: "signupImage signupForm";
+    /* background-color: lime; */
+}
+.signupImage {
+    grid-area: signupImage;
+    background-image: url("../../images/bg.jpg");
+    background-size: 100% 1005, cover;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.signupForm {
+    grid-area: signupForm;
+}
+.signupForm h2 {
+    font-family: 'Roboto', sans-serif;
+    /* font-size: 2rem; */
+}
+.googleLogin {
+    width: 100%;
+}
+.card {
+    box-shadow: 5px 10px 18px #888888;
+}
+@media only screen and (max-width: 1100px) {
+    html {
+      font-size: 70%;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .signupContainer {
+      display: grid;
+      /* background-color: lime; */
+      grid-template-areas:
+        "signupImage"
+        "signupForm";
+      grid-template-rows: repeat(2, minmax(60vh, min-content));
+      grid-template-columns: 1fr;
+    }
+    .signupForm {
+      display: block;
+    }
+  
+    .CardContent {
+      display: block;
+    }
+  }
+  

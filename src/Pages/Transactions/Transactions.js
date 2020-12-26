@@ -6,6 +6,7 @@ import { fetchTransactions } from '../../Redux/transactions/transactionActions'
 import TransactionList from '../../Components/TransactionList/TransactionList'
 import TransactionSearchFilter from '../../Components/TransactionSearchFilter/TransactionSearchFilter'
 import TransactionDateFilter from '../../Components/TransactionDateFilter/TransactionDateFilter'
+import style from "./Transactions.module.css"
 
 //fetching data by lifecycleMethod
 //fetching all Transacrions by componentDidMount
@@ -37,12 +38,22 @@ class Transactions extends Component  {
     return (
         <div>
             {user ? (
-            <div>
-            <h1>Transactions Page</h1>
+            <div className = {style.transactionPage}>
+            <div className = {style.transactionHeading}>
+                <h2>Transactions Page</h2>
+            </div>
+            <div className = {style.transactionAddForm}>
             <TransactionForm/>
+            </div>
+            <div className = {style.transactionSearchForm}>
             <TransactionSearchFilter searchField = {searchField} handleSearchFormInput = {this.handleSearchFormInput}/>
+            </div>
+            <div className = {style.transactionDateFilter}>
             <TransactionDateFilter />
+            </div>
+            <div className = {style.transactionList}>
             <TransactionList transactions = {filterTransactions}/>
+            </div>
             </div>
             ) : 
             <Redirect to = "/"/>}

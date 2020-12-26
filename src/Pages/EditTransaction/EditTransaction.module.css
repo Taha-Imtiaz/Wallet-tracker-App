@@ -1,0 +1,9 @@
+.editContainer {
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+
+   height: calc(100vh - 80px);
+   background-color: rgb(49, 38, 38);
+}

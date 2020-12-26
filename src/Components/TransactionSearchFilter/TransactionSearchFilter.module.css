@@ -1,0 +1,8 @@
+.searchFilter {
+display: grid;
+grid-template-columns: 4fr 92fr 4fr;
+grid-template-areas: ". filterField .";
+}
+.filterField {
+    grid-area: filterField;
+}

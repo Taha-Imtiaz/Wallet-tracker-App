@@ -1,0 +1,18 @@
+.trasactionForm {
+    display: grid;
+    grid-template-rows: 10vh;
+    grid-template-areas: "formFields";
+    margin: 0 3rem;
+   
+}
+.formFields {
+  grid-area: formFields;  
+ 
+ display: grid;
+grid-template-columns: repeat(3, 1fr) min-content;
+grid-gap: 1rem;
+}
+
+.styleDropDown {
+width: 100% !important;
+}

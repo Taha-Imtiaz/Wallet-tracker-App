@@ -1,0 +1,19 @@
+.listItemBody {
+    display: grid;
+    grid-template-rows: 7vh;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0 3rem;
+    
+    /* background-color: olive; */
+    border-bottom: 1px solid #a8a8a8;
+    font-family: "Roboto",serif;
+    /* align-content: center; */
+}
+  
+    
+
+.flex {
+display: flex;
+/* justify-content: center; */
+align-items: center;
+   }

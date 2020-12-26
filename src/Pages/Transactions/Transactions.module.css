@@ -1,0 +1,37 @@
+.transactionPage {
+    display: grid;
+    height: calc(100vh - 80px);
+    grid-template-rows: repeat(4, minmax(10vh, min-content)) minmax(60vh, min-content);
+    grid-template-areas: "transactionHeading"
+                            "transactionAddForm"
+                            "transactionSearchForm"
+                            "transactionDateFilter"
+                            "transactionList";
+}
+.transactionHeading {
+    grid-area: transactionHeading;
+    /* background-color: magenta; */
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+   
+}
+.transactionHeading h2 {
+    font-family: "Roboto", sans-serif;
+}
+.transactionAddForm {
+    grid-area: transactionAddForm;
+    /* background-color: maroon; */
+}
+.transactionSearchForm {
+    grid-area: transactionSearchForm;
+    /* background-color: mediumaquamarine; */
+}
+.transactionDateFilter {
+grid-area: transactionDateFilter;
+/* background-color: mediumorchid; */
+}
+.transactionList {
+    grid-area: transactionList;
+    /* background-color: mediumseagreen; */
+}

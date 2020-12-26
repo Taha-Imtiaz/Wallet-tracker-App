@@ -7,6 +7,8 @@ import { auth, firestore } from './Firebase/firebase'
 import { connect } from 'react-redux'
 import { setCurrentUser,removeCurrentUser } from './Redux/user/userActions'
 import Navbar from './Components/Navbar/Navbar'
+import "./App.css"
+import Signup from './Pages/Signup/Signup'
 
 class App extends Component  {
   componentDidMount() {
@@ -48,6 +50,9 @@ class App extends Component  {
       <Navbar/>
       <Switch>
       <Route path = "/" component = {Home} exact />
+      <Route path = "/signup" component = {Signup}  />
+
+
       <Route path = "/dashboard/:uid/transactions" component ={Transactions} exact/>
       <Route path = "/dashboard/:uid/transactions/:transactionId" component = {EditTransaction}/>
       </Switch>
